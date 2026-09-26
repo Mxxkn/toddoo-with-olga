@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f6f0">
+  <meta name="description" content="Авторское путешествие на остров Тодду, Мальдивы. 8 дней и 7 ночей с человеком, который знает остров: океан, риф, черепахи и настоящая местная жизнь.">
+  <title>Тодду для своих — авторское путешествие на Мальдивы</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <style>
+    :root{--paper:#f8f6f0;--cream:#eeeadf;--ink:#173132;--muted:#586b67;--teal:#136e69;--teal-dark:#0b5655;--sea:#d6ece7;--line:#d7ded8;--white:#fff;--serif:'Playfair Display',Georgia,serif;--sans:'Manrope',Arial,sans-serif}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}
+    a{color:inherit}
+    button{font:inherit}
+    .container{width:min(1200px,calc(100% - 56px));margin-inline:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:800;letter-spacing:.19em;text-transform:uppercase;color:var(--teal)}
+    .eyebrow:before{content:"";width:24px;height:1px;background:currentColor}
+    .serif{font-family:var(--serif);font-weight:400}
+    .italic{font-style:italic}
+    .site-header{height:82px;display:flex;align-items:center;border-bottom:1px solid rgba(23,49,50,.08);position:relative;z-index:20;background:var(--paper)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{text-decoration:none;display:inline-flex;align-items:center;gap:12px;font-size:18px;font-weight:800;letter-spacing:-.05em;white-space:nowrap}
+    .brand-mark{display:grid;place-items:center;width:34px;height:34px;border:1.7px solid var(--teal);border-radius:50%;color:var(--teal);font-family:var(--serif);font-size:23px;font-style:italic;font-weight:400;line-height:1}
+    .brand small{display:block;font-size:9px;line-height:1.2;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--teal);margin-top:2px}
+    .nav-links{display:flex;align-items:center;gap:32px}
+    .nav-links a{text-decoration:none;font-size:12px;font-weight:700;transition:color .2s}
+    .nav-links a:hover{color:var(--teal)}
+    .nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:18px;text-decoration:none;border:1px solid var(--teal);border-radius:100px;background:var(--teal);color:#fff;font-size:12px;font-weight:800;letter-spacing:.01em;min-height:48px;padding:0 21px;white-space:nowrap;transition:background .2s,transform .2s,border-color .2s}
+    .nav-cta:hover,.button:hover{background:var(--teal-dark);border-color:var(--teal-dark);transform:translateY(-2px)}
+    .arrow{font-size:19px;font-weight:400;line-height:1}
+    .menu-toggle{display:none}
+    .hero{padding:55px 0 92px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+    .hero-copy{padding:12px 0 0}
+    .hero h1{font-family:var(--serif);font-size:clamp(54px,6vw,88px);line-height:1.035;letter-spacing:-.065em;font-weight:400;margin:23px 0 26px;max-width:660px}
+    .hero h1 em{font-weight:400;color:var(--teal)}
+    .hero .intro{font-size:14px;line-height:1.9;color:var(--muted);max-width:440px;margin:0 0 31px}
+    .hero-actions{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+    .text-link{text-decoration:none;border-bottom:1px solid var(--teal);padding:0 0 5px;color:var(--teal);font-size:12px;font-weight:800;white-space:nowrap}
+    .hero-image-wrap{position:relative;width:min(100%,460px);aspect-ratio:700/1244;min-height:0;justify-self:center}
+    .hero-image{height:100%;width:100%;object-fit:cover;object-position:center;border-radius:260px 260px 10px 10px}
+    .hero-image-wrap:before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid #c2d6d0;border-radius:260px 260px 10px 10px;z-index:-1}
+    .photo-note{position:absolute;left:-38px;bottom:35px;background:var(--paper);padding:17px 20px;box-shadow:0 15px 45px rgba(14,55,55,.12);border-radius:2px;display:flex;align-items:center;gap:12px;font-size:11px;line-height:1.5;color:var(--muted);max-width:210px}
+    .photo-note strong{display:block;color:var(--ink);font-size:13px}
+    .note-sun{font-size:27px;color:#d7a875;line-height:1}
+    .hero-index{position:absolute;right:-31px;bottom:16px;writing-mode:vertical-rl;font-size:10px;font-weight:800;letter-spacing:.18em;color:var(--teal);text-transform:uppercase}
+    .quick-facts{background:#e9f0eb;border-block:1px solid #dae6df}
+    .facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .fact{padding:26px 20px 26px 32px;border-left:1px solid #cbdad3}
+    .fact:first-child{border-left:0;padding-left:0}
+    .fact strong{display:block;font-family:var(--serif);font-size:26px;line-height:1.1;font-weight:400;letter-spacing:-.035em}
+    .fact span{display:block;margin-top:6px;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+    .section{padding:110px 0}
+    .section-heading{max-width:760px}
+    .section-heading h2,.story-copy h2,.format-head h2,.contact h2{font-family:var(--serif);font-weight:400;letter-spacing:-.055em;font-size:clamp(40px,4.3vw,62px);line-height:1.13;margin:18px 0 20px}
+    .section-heading p{font-size:14px;line-height:1.9;color:var(--muted);max-width:590px;margin:0}
+    .discover{background:var(--paper)}
+    .discover .section-heading{margin-bottom:44px}
+    .experience-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .experience{min-height:390px;position:relative;overflow:hidden;border-radius:4px;background:#133f49;color:#fff;display:flex;align-items:flex-end}
+    .experience img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+    .experience:hover img{transform:scale(1.045)}
+    .experience:after{content:"";position:absolute;inset:20% 0 0;background:linear-gradient(transparent,rgba(5,33,36,.82))}
+    .experience-body{position:relative;z-index:1;padding:26px 26px 28px}
+    .experience-num{font-size:10px;font-weight:800;letter-spacing:.14em;color:#c4ebe2}
+    .experience h3{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.15;letter-spacing:-.03em;margin:9px 0}
+    .experience p{font-size:11px;line-height:1.65;max-width:250px;margin:0;color:#edf6f1}
+    .experience--plankton{background:radial-gradient(circle at 78% 30%,#2c8190 0,#104d67 31%,#082a42 75%)}
+    .experience--plankton:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 74% 43%,#b0fff0 0 2px,transparent 4px),radial-gradient(circle at 49% 20%,#73e6e8 0 2px,transparent 5px),radial-gradient(circle at 25% 61%,#b0fff0 0 2px,transparent 6px),radial-gradient(circle at 87% 69%,#79dfe5 0 2px,transparent 5px),radial-gradient(circle at 42% 72%,#c5fff0 0 1px,transparent 5px);filter:drop-shadow(0 0 10px #76ede4)}
+    .experience--cta{background:#136e69;text-decoration:none;transition:background .2s,transform .2s}
+    .experience--cta:hover{background:#0b5655;transform:translateY(-3px)}
+    .experience--cta:before{content:"↗";position:absolute;top:20px;right:25px;font-size:42px;font-weight:300;color:#c2e6da}
+    .experience--cta:after{inset:0;background:radial-gradient(circle at 78% 20%,rgba(182,232,213,.22),transparent 42%)}
+    .experience--cta h3{font-size:35px;max-width:270px}
+    .experience--cta p{font-size:12px;max-width:290px}
+    .experience-cta-label{display:inline-flex;gap:17px;align-items:center;margin-top:22px;padding-bottom:6px;border-bottom:1px solid #d6f2e7;font-size:11px;font-weight:800}
+    .story{background:#eaf0ea;overflow:hidden}
+    .story-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:11%}
+    .story-visual{position:relative;padding:30px 0 32px 42px}
+    .story-visual:before{content:"";position:absolute;left:0;top:0;width:72%;height:85%;border:1px solid #aec9c0}
+    .story-visual img{width:100%;height:560px;object-fit:cover;object-position:center 58%;position:relative}
+    .story-caption{position:absolute;right:-31px;bottom:0;background:var(--paper);padding:16px 23px;min-width:220px}
+    .story-caption span{font-size:10px;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--teal)}
+    .story-caption strong{display:block;font-family:var(--serif);font-size:23px;font-weight:400;letter-spacing:-.04em;margin-top:3px}
+    .story-copy p{font-size:13px;line-height:1.9;color:var(--muted);margin:0 0 16px}
+    .story-copy .quote{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--ink);line-height:1.5;margin:28px 0 0}
+    .format{background:var(--paper)}
+    .format-head{display:flex;justify-content:space-between;gap:55px;align-items:end;margin-bottom:40px}
+    .format-head h2{max-width:590px;margin-bottom:0}
+    .format-head p{font-size:13px;color:var(--muted);line-height:1.8;max-width:320px;margin:0 0 5px}
+    .format-list{border-top:1px solid var(--line)}
+    .format-row{display:grid;grid-template-columns:70px 1fr 1.2fr;gap:20px;align-items:center;padding:28px 0;border-bottom:1px solid var(--line)}
+    .format-row .n{font-family:var(--serif);font-size:24px;color:#9ab5ab}
+    .format-row h3{font-size:16px;letter-spacing:-.025em;margin:0}
+    .format-row p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+    .image-band{height:420px;position:relative;overflow:hidden;background:#9abec2}
+    .image-band img{width:100%;height:100%;object-fit:cover;object-position:center 55%}
+    .image-band:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,40,44,.58),transparent 65%)}
+    .image-band p{position:absolute;left:max(calc((100vw - 1200px)/2),28px);bottom:34px;z-index:1;color:#fff;font-family:var(--serif);font-size:clamp(29px,3vw,45px);font-style:italic;max-width:500px;line-height:1.2;margin:0}
+    .details{background:#eaf0ea}
+    .details-grid{display:grid;grid-template-columns:1fr 1fr;gap:85px;align-items:start}
+    .details h2{font-family:var(--serif);font-size:clamp(39px,4vw,55px);font-weight:400;letter-spacing:-.05em;line-height:1.15;margin:17px 0 25px}
+    .details p{font-size:13px;color:var(--muted);line-height:1.9;max-width:520px}
+    .details ul{list-style:none;padding:0;margin:21px 0 0}
+    .details li{padding:16px 0 16px 32px;border-bottom:1px solid #cbdad3;position:relative;font-size:13px;line-height:1.7}
+    .details li:before{content:"↗";position:absolute;left:0;top:14px;color:var(--teal);font-size:18px}
+    .details-photo{display:grid;grid-template-columns:1fr .73fr;gap:16px;align-items:end;padding-top:16px}
+    .details-photo img:first-child{height:480px;width:100%;object-fit:cover}
+    .details-photo img:last-child{height:320px;width:100%;object-fit:cover}
+    .contact{background:#123f3f;color:#f8f6f0;padding:95px 0 36px}
+    .contact-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:end}
+    .contact .eyebrow{color:#b4ddd1}
+    .contact h2{font-size:clamp(43px,5vw,70px);margin-bottom:0}
+    .contact h2 em{color:#b5dcd0}
+    .contact-aside p{color:#c5d9d1;font-size:13px;line-height:1.85;max-width:390px;margin:0 0 25px}
+    .contact-buttons{display:flex;gap:10px;flex-wrap:wrap}
+    .contact .button{background:#e7f1eb;color:#123f3f;border-color:#e7f1eb}
+    .contact .button:hover{background:white;border-color:white}
+    .button-outline{background:transparent!important;color:#eef6f1!important;border-color:#81aaa2!important}
+    .button-outline:hover{background:#245856!important}
+    .footer{border-top:1px solid rgba(255,255,255,.18);margin-top:80px;padding-top:26px;display:flex;justify-content:space-between;gap:20px;color:#aec9c0;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+    .footer a{text-decoration:none}
+    a:focus-visible,button:focus-visible{outline:3px solid #d4a56c;outline-offset:4px}
+    .credentials{display:grid;grid-template-columns:repeat(3,1fr);margin-top:72px;border-top:1px solid #cbdad3;border-bottom:1px solid #cbdad3}
+    .credential{padding:28px 30px 29px;border-left:1px solid #cbdad3}
+    .credential:first-child{border-left:0;padding-left:0}
+    .credential strong{display:block;font-family:var(--serif);font-size:clamp(27px,3vw,40px);font-weight:400;letter-spacing:-.045em;line-height:1.15;color:var(--teal)}
+    .credential span{display:block;margin-top:8px;font-size:11px;line-height:1.6;color:var(--muted)}
+    @media(max-width:1000px){.hero-grid{gap:35px}.hero-image-wrap{min-height:0}.hero-image{min-height:0}.hero h1{font-size:clamp(51px,6vw,70px)}.nav-links{gap:18px}.story-grid{gap:6%}.story-visual img{height:510px}.experience{min-height:360px}.details-grid{gap:35px}}
+    @media(max-width:760px){.container{width:min(100% - 36px,600px)}.site-header{height:68px}.nav-cta{display:none}.menu-toggle{display:grid;place-items:center;width:40px;height:40px;border:1px solid var(--line);border-radius:50%;background:transparent;color:var(--ink);font-size:21px;cursor:pointer}.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:var(--paper);padding:22px 18px 28px;box-shadow:0 16px 25px rgba(23,49,50,.12);flex-direction:column;align-items:stretch;gap:0}.nav-links.open{display:flex}.nav-links a{padding:13px 4px;font-size:14px}.hero{padding:46px 0 60px}.hero-grid{grid-template-columns:1fr;gap:42px}.hero-copy{padding:0}.hero h1{font-size:clamp(50px,11vw,72px);margin:16px 0 22px}.hero .intro{font-size:13px}.hero-image-wrap{width:min(100%,450px)}.hero-image{height:100%}.hero-image{border-radius:280px 280px 5px 5px}.photo-note{left:-7px;bottom:25px}.hero-index{right:-12px}.facts-grid{grid-template-columns:1fr 1fr}.fact{border-bottom:1px solid #cbdad3;padding:22px 12px 22px 22px}.fact:first-child{padding-left:0}.fact:nth-child(3){border-left:0;padding-left:0;border-bottom:0}.fact:nth-child(4){border-bottom:0}.fact strong{font-size:22px}.section{padding:78px 0}.section-heading h2,.story-copy h2,.format-head h2{font-size:clamp(40px,9vw,56px)}.experience-grid{grid-template-columns:1fr}.experience:first-child{grid-column:auto}.experience{min-height:360px}.story-grid,.details-grid{grid-template-columns:1fr;gap:38px}.story-visual{order:2;padding-left:24px}.story-copy{order:1}.story-visual img{height:520px}.story-caption{right:0}.format-head{display:block}.format-head p{margin-top:18px}.format-row{grid-template-columns:40px 1fr;gap:10px 15px}.format-row p{grid-column:2}.image-band{height:350px}.details-photo{gap:12px}.contact{padding-top:74px}.contact-inner{grid-template-columns:1fr;gap:25px}.contact h2{font-size:clamp(48px,11vw,66px)}.footer{margin-top:65px}}
+    @media(max-width:760px){.credentials{grid-template-columns:1fr;margin-top:50px}.credential,.credential:first-child{border-left:0;padding:20px 0}.credential+ .credential{border-top:1px solid #cbdad3}.credential strong{font-size:32px}}
+    @media(max-width:480px){.hero h1{font-size:50px}.hero-image-wrap{width:100%}.hero-image{height:100%}.photo-note{font-size:10px;padding:12px 14px}.experience-grid{grid-template-columns:1fr}.experience:first-child{grid-column:auto}.experience{min-height:360px}.experience h3{font-size:28px}.story-visual img{height:440px}.details-photo img:first-child{height:350px}.details-photo img:last-child{height:245px}.footer{flex-direction:column;gap:9px}.contact-buttons .button{flex:1}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Основная навигация">
+      <a class="brand" href="#top" aria-label="Тодду для своих, наверх"><span class="brand-mark">т</span><span>Тодду для своих<small>Авторские путешествия</small></span></a>
+      <div class="nav-links" id="nav-links">
+        <a href="#experience">Что увидим</a><a href="#format">Формат поездки</a><a href="#author">Обо мне</a>
+      </div>
+      <a class="nav-cta" href="https://t.me/OlgaAestheticFlow" target="_blank" rel="noopener noreferrer">Написать мне <span class="arrow" aria-hidden="true">↗</span></a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav-links">☰</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Мальдивы, как их знают местные</span>
+          <h1 id="hero-title">Остров, в который хочется <em>вернуться.</em></h1>
+          <p class="intro">Авторское путешествие на Тодду: океан, риф и неспешная жизнь маленького острова. Я покажу места, которые сама открыла за почти месяц на Мальдивах.</p>
+          <div class="hero-actions"><a class="button" href="https://t.me/OlgaAestheticFlow" target="_blank" rel="noopener noreferrer">Поехать со мной <span class="arrow" aria-hidden="true">↗</span></a><a class="text-link" href="#island">Узнать об острове</a></div>
+        </div>
+        <div class="hero-image-wrap">
+          <img class="hero-image" src="./assets/photo-5.jpg" alt="Белый пляж и пальмы на острове Тодду" fetchpriority="high">
+          <div class="photo-note"><span class="note-sun" aria-hidden="true">☼</span><span><strong>Тодду, Мальдивы</strong>Место, где время течёт медленнее</span></div>
+          <span class="hero-index">Тодду · Мальдивы</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="quick-facts" id="island"><div class="container facts-grid">
+      <div class="fact"><strong>8 дней</strong><span>7 ночей на острове</span></div>
+      <div class="fact"><strong>Тодду</strong><span>Локальный остров</span></div>
+      <div class="fact"><strong>Малая группа</strong><span>Своя компания</span></div>
+      <div class="fact"><strong>Ваш ритм</strong><span>Гибкая программа</span></div>
+    </div></div>
+
+    <section class="discover section" id="experience">
+      <div class="container">
+        <div class="section-heading"><span class="eyebrow">Впечатления</span><h2>Не просто увидеть Мальдивы.<br><span class="serif italic">Почувствовать их.</span></h2><p>Тодду — это больше, чем открытка с пляжем. Здесь рядом с бирюзовой водой живёт настоящий остров: с плантациями, вечерним портом и маленькими открытиями каждый день.</p></div>
+        <div class="experience-grid">
+          <article class="experience"><img src="./assets/photo-4.jpg" alt="Морская черепаха у рифа" loading="lazy"><div class="experience-body"><span class="experience-num">01 / ОКЕАН</span><h3>Черепахи у берега</h3><p>По утрам рядом с островом можно встретить морских черепах — без лодки.</p></div></article>
+          <article class="experience"><img src="./assets/photo-5.jpg" alt="Пляж и прозрачная вода у острова" loading="lazy"><div class="experience-body"><span class="experience-num">02 / РИФ</span><h3>Риф без лодки</h3><p>Снорклинг прямо с берега: я покажу знакомый мне участок рифа рядом с портом.</p></div></article>
+          <article class="experience"><img src="./assets/photo-2.jpg" alt="Пальмы и дорога на острове" loading="lazy"><div class="experience-body"><span class="experience-num">03 / ОСТРОВ</span><h3>Плантации и багги</h3><p>Проедем по плантациям и услышим истории о жизни острова от местных жителей.</p></div></article>
+          <article class="experience"><img src="./assets/photo-1.jpg" alt="Закат над океаном" loading="lazy"><div class="experience-body"><span class="experience-num">04 / ВЕЧЕР</span><h3>Ночной порт</h3><p>Посмотрим, как вечером урожай с плантаций грузят на лодки для других островов.</p></div></article>
+          <article class="experience experience--plankton"><div class="experience-body"><span class="experience-num">05 / НОЧЬ</span><h3>Светящийся планктон</h3><p>В безлунную ночь его можно заметить у берега — если позволят погода и фаза луны.</p></div></article>
+          <a class="experience experience--cta" href="https://t.me/OlgaAestheticFlow" target="_blank" rel="noopener noreferrer"><div class="experience-body"><span class="experience-num">06 / ВАШЕ ПУТЕШЕСТВИЕ</span><h3>Хочешь увидеть это своими глазами?</h3><p>Поехали со мной на Тодду. Расскажу о программе и ближайших датах.</p><span class="experience-cta-label">Написать мне <span aria-hidden="true">↗</span></span></div></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="story section" id="author">
+      <div class="container story-grid">
+        <div class="story-visual"><img src="./assets/photo-3.jpg" alt="Отдых на воде Мальдив" loading="lazy"><div class="story-caption"><span>Моя история</span><strong>Почти месяц вместо 12 дней</strong></div></div>
+        <div class="story-copy"><span class="eyebrow">Знакомство</span><h2>Однажды я просто не захотела <span class="italic">улетать.</span></h2><p>Впервые я приехала на Мальдивы на двенадцать дней — и несколько раз переносила обратный билет. Осталась почти на месяц, большую часть времени провела на Тодду и успела узнать остров за пределами стандартных маршрутов.</p><p>Теперь хочу показать его вам: где приятно плавать с маской, как устроена местная жизнь, куда идти после дождя и когда остров становится особенно красивым.</p><p class="quote">«Путешествие становится особенным, когда рядом есть человек, которому хочется делиться найденным».</p></div>
+      </div>
+      <div class="container credentials" aria-label="Факты об организаторе">
+        <div class="credential"><strong>Врач</strong><span>По образованию</span></div>
+        <div class="credential"><strong>13+ лет</strong><span>Работы в международной фармацевтике</span></div>
+        <div class="credential"><strong>23+ страны</strong><span>Посетила ещё до первой поездки на Мальдивы</span></div>
+      </div>
+    </section>
+
+    <section class="format section" id="format">
+      <div class="container"><div class="format-head"><div><span class="eyebrow">Ваше путешествие</span><h2>Достаточно планов, чтобы расслабиться. Достаточно свободы, чтобы <span class="italic">быть собой.</span></h2></div><p>Я встречаю группу в аэропорту и остаюсь с вами на Тодду все 8 дней. Дальше — остров, океан и программа, которая подстраивается под погоду и настроение.</p></div>
+        <div class="format-list">
+          <div class="format-row"><span class="n">01</span><h3>8 дней / 7 ночей</h3><p>Время познакомиться с островом без спешки.</p></div>
+          <div class="format-row"><span class="n">02</span><h3>Маленькая группа</h3><p>Подойдёт друзьям, парам и соло-путешественникам.</p></div>
+          <div class="format-row"><span class="n">03</span><h3>Гибкий маршрут</h3><p>Несколько важных точек и свободное время для ваших открытий.</p></div>
+          <div class="format-row"><span class="n">04</span><h3>Местная команда</h3><p>Морские активности и дайвинг — с профессионалами, которым я доверяю.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="image-band"><img src="./assets/maldives-banner.jpg" alt="Иллюстративный вид мальдивского берега" loading="lazy"><p>Ваши дни могут звучать совсем по-другому.</p></div>
+
+    <section class="details section"><div class="container details-grid"><div><span class="eyebrow">Для кого эта поездка</span><h2>Для тех, кому хочется <span class="italic">настоящего.</span></h2><p>Если вам ближе живые места, прогулки и океан, чем готовый сценарий по минутам, на Тодду вам будет хорошо.</p><ul><li>Друзьям, которые ищут активный отдых вместе.</li><li>Тем, кто путешествует один и хочет чувствовать себя уверенно, сохраняя личное пространство.</li><li>Парам, которым интересно открыть Мальдивы за пределами резорта.</li></ul></div><div class="details-photo"><img src="./assets/photo-6.jpg" alt="Тихий пляж острова Тодду" loading="lazy"><img src="./assets/photo-1.jpg" alt="Золотой закат над океаном" loading="lazy"></div></div></section>
+
+    <section class="contact" id="contact"><div class="container"><div class="contact-inner"><div><span class="eyebrow">Первый поток набирается</span><h2>Увидимся <em>на Тодду?</em></h2></div><div class="contact-aside"><p>Напишите мне — расскажу подробнее о программе, ближайших датах и отвечу на ваши вопросы.</p><div class="contact-buttons"><a class="button" href="https://t.me/OlgaAestheticFlow" target="_blank" rel="noopener noreferrer">Написать в Telegram <span class="arrow" aria-hidden="true">↗</span></a><a class="button button-outline" href="https://www.instagram.com/olka_korole" target="_blank" rel="noopener noreferrer">Instagram <span class="arrow" aria-hidden="true">↗</span></a></div></div></div><footer class="footer"><span>Тодду для своих · Мальдивы</span><a href="#top">Наверх ↑</a></footer></div></section>
+  </main>
+<script>
+    const toggle=document.querySelector('.menu-toggle');
+    const links=document.querySelector('.nav-links');
+    toggle.addEventListener('click',()=>{const open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Закрыть меню':'Открыть меню');toggle.textContent=open?'×':'☰'});
+    links.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{links.classList.remove('open');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-label','Открыть меню');toggle.textContent='☰'}));
+  </script>
+</body>
+</html>
